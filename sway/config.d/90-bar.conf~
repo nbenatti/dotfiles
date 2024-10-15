@@ -1,0 +1,6 @@
+bar {
+    swaybar_command waybar
+    position top
+    mode hide
+    modifier Mod4
+}
