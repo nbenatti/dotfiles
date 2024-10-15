@@ -83,6 +83,9 @@ input "type:touchpad" {
 	middle_emulation disabled
 }
 
+### Output configuration
+output "*" bg ~/Immagini/wallpapers/oldschool-machines/ibm-data-centre-toronto-1963.jpg fill
+
 ### Key bindings
 #
 # Basics:
