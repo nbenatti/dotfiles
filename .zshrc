@@ -117,7 +117,7 @@ export EDITOR='vim'
 # config aliases
 alias zshconfig="sudo vim ~/.zshrc"
 alias swayconfig="sudo vim ~/.config/sway/config"
-alias waybarconfig="sudo vim ~/.config/sway/config.d/90-bar.conf"
+alias waybarconfig="sudo vim ~/.config/waybar/config.jsonc"
 
 # package management aliases
 alias updpkg="sudo dnf up"

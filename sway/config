@@ -84,7 +84,7 @@ input "type:touchpad" {
 }
 
 ### Output configuration
-output "*" bg ~/Immagini/wallpapers/oldschool-machines/ibm-data-centre-toronto-1963.jpg fill
+output "*" bg ~/Pictures/wallpapers/oldschool-machines/ibm-data-centre-toronto-1963.jpg fill
 
 ### Key bindings
 #
@@ -236,6 +236,8 @@ bindsym $mod+r mode "resize"
 #
 titlebar_border_thickness 0
 #hide_edge_borders --i3 smart
+font pango:monospace 1
+titlebar_padding 3
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
