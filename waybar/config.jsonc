@@ -23,7 +23,7 @@
         "temperature",
         "backlight",
         "keyboard-state",
-        "sway/language",
+        //"sway/language",
         "pulseaudio",
         "network",
         "tray",
@@ -112,16 +112,18 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+		"format": 5
     },
     "memory": {
-        "format": "{used:0.1f}GiB-{swapUsed:0.1f}GiB "
+        "format": "{used:0.1f}GiB-{swapUsed:0.1f}GiB ",
+		"interval": 1
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "thermal-zone": 1,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp2_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
+		"interval": 5,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
@@ -132,7 +134,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 20,
             "critical": 5
         },
@@ -161,9 +163,9 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"

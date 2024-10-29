@@ -44,6 +44,8 @@ output * bg /usr/share/backgrounds/default.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output eDP-1 resolution 1920x1080 position 0,0
+output DP-5 resolution 1920x1200 position 1920,0
 
 ### Idle configuration
 #
@@ -84,7 +86,8 @@ input "type:touchpad" {
 }
 
 ### Output configuration
-output "*" bg ~/Pictures/wallpapers/oldschool-machines/ibm-data-centre-toronto-1963.jpg fill
+output eDP-1 bg ~/Pictures/wallpapers/oldschool-machines/oldschool-machines-DIGITAL-PDP-11-20.jpg fill
+output "Dell Inc. DELL U2415 7MT0177Q1CFU" bg ~/Pictures/wallpapers/oldschool-machines/oldschool-machines-7500.jpg fill
 
 ### Key bindings
 #
@@ -114,7 +117,16 @@ output "*" bg ~/Pictures/wallpapers/oldschool-machines/ibm-data-centre-toronto-1
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+	
+	# Take full screenshot to clipboard
+	bindsym $mod+p exec grimshot copy output
+	
+	# Take window screenshot to clipboard
+	bindsym $mod+Alt+p exec grimshot copy active
 
+	# Take area screenshot to clipboard
+	bindsym $mod+Shift+p exec grimshot copy area
+	
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
@@ -237,7 +249,7 @@ bindsym $mod+r mode "resize"
 titlebar_border_thickness 0
 #hide_edge_borders --i3 smart
 font pango:monospace 1
-titlebar_padding 3
+titlebar_padding 0
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d

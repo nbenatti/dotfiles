@@ -132,8 +132,12 @@ alias updally="$aliases[updpkgy] && $aliases[updfpky]"
 # misc command aliases
 alias -s gpt=sgpt
 alias lah="ls -lah"
+alias kssh="kitten ssh"
 
 # workspace aliases
+alias poli="cd ~/SynologyDrive/Polimi/mag_2o_anno"
+alias cto="cd ~/SynologyDrive/Polimi/mag_2o_anno/cto/project"
+alias odc="cd ~/SynologyDrive/Polimi/mag_2o_anno/offdef_cybersec/project"
 alias thesis="cd ~/SynologyDrive/Polimi/thesis"
 alias workon_zephyr="$aliases[thesis] && source ./zephyrproject/.venv/bin/activate && cd zephyrproject/zephyr && source zephyr-env.sh && cd ../.."
 
@@ -141,9 +145,24 @@ alias workon_zephyr="$aliases[thesis] && source ./zephyrproject/.venv/bin/activa
 # e.g. `dnf in foobar*` will now work, while zsh accepts only `dnf in foobar\*` by default
 setopt nonomatch
 
-# environment
+#
+# Environment
+#
+# RISC-V 32 GNU toolchain
+export PATH="/opt/riscv32-gnu/bin:$PATH"
 
-# external scripts
+# RISC-V 64 GNU toolchain
+export PATH="/opt/riscv64-gnu/bin:$PATH"
+
+# RISC-V multilib newlib toolchain
+export PATH="/opt/riscv-newlib/bin:$PATH"
+
+# RISC-V 32 newlib toolchain
+export PATH="/opt/riscv32-newlib/bin:$PATH"
+
+#
+# External scripts
+#
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
