@@ -34,18 +34,15 @@ set $fmgr nautilus
 set $www firefox
 
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# Requires: desktop-backgrounds-compat, swaybg
-output * bg /usr/share/backgrounds/default.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# Resolution and topology
 output eDP-1 resolution 1920x1080 position 0,0
-output DP-5 resolution 1920x1200 position 1920,0
+output "Dell Inc. DELL U2415 7MT0177Q1CFU" resolution 1920x1200 position 1920,0
+
+# Backgrounds
+output eDP-1 bg ~/Pictures/wallpapers/oldschool-machines/oldschool-machines-DIGITAL-PDP-11-20.jpg fill
+output "Dell Inc. DELL U2415 7MT0177Q1CFU" bg ~/Pictures/wallpapers/oldschool-machines/oldschool-machines-7500.jpg fill
 
 ### Idle configuration
 #
@@ -73,7 +70,6 @@ output DP-5 resolution 1920x1200 position 1920,0
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-
 input * {
 	xkb_layout "it"
 }
@@ -84,10 +80,6 @@ input "type:touchpad" {
 	natural_scroll enabled
 	middle_emulation disabled
 }
-
-### Output configuration
-output eDP-1 bg ~/Pictures/wallpapers/oldschool-machines/oldschool-machines-DIGITAL-PDP-11-20.jpg fill
-output "Dell Inc. DELL U2415 7MT0177Q1CFU" bg ~/Pictures/wallpapers/oldschool-machines/oldschool-machines-7500.jpg fill
 
 ### Key bindings
 #
